@@ -1,43 +1,39 @@
-# Informe Final de Tesis - Generación Automática de Documentación de Código
+# AutoDocuCode: Google Cloud Function para Procesar Archivos Excel con Documentación Automática
 
-## Resumen
+Este proyecto fue desarrollado como parte del trabajo de tesis para la **Maestría en Tecnologías de la Información y Comunicación** en la **Universidad de San Carlos de Guatemala**. El objetivo de **AutoDocuCode** es automatizar la **generación de documentación de código fuente** utilizando **técnicas de Prompt Engineering** con **modelos de lenguaje de gran tamaño (LLM)**, desplegando una solución basada en **Google Cloud Functions**.
 
-Este informe presenta el desarrollo de una herramienta automatizada para la **generación de documentación de código fuente** utilizando **técnicas avanzadas de Prompt Engineering** e **inteligencia artificial (IA)**, implementado en **Google Cloud Platform (GCP)**. La documentación es generada automáticamente para fragmentos de código en **Python** mediante el uso de la **API de OpenAI**.
+## Contexto de la Tesis
 
-El estudio aborda la selección de fragmentos de código del corpus de **CodeSearchNet**, la implementación técnica de la herramienta, la evaluación de los resultados, y las opiniones de desarrolladores sobre la calidad y utilidad de la documentación generada automáticamente.
+La falta de documentación clara y precisa en el código fuente es uno de los mayores problemas que enfrentan los desarrolladores, lo que afecta la mantenibilidad y la calidad del software. **AutoDocuCode** propone una herramienta automatizada para generar documentación de manera eficiente y precisa utilizando la API de **OpenAI** para analizar fragmentos de código contenidos en archivos Excel.
 
-## Introducción
+### Objetivos del Proyecto
 
-El objetivo de este trabajo es abordar el problema de la **falta de documentación en el código fuente** y proponer una solución que utilice modelos de lenguaje de gran tamaño (**LLMs**). Este enfoque permite que los desarrolladores ahorren tiempo en la creación de documentación, mejorando la mantenibilidad y claridad del código.
+1. **Automatizar el proceso de documentación de código fuente** en archivos Excel utilizando una función de Google Cloud.
+2. **Evaluar la calidad de la documentación generada** utilizando métricas estándar como **BLEU**, **ROUGE-L**, y **METEOR**.
+3. **Integrar técnicas de Prompt Engineering** para optimizar la generación de documentación mediante **Modelos de Lenguaje de Gran Tamaño**.
+4. **Implementar una solución escalable** mediante **Google Cloud Functions** y **Google Cloud Storage** para el procesamiento y almacenamiento de los resultados.
 
-## Metodología
+## Requisitos Previos
 
-- **Selección del corpus**: Se utilizaron fragmentos de código **Python** extraídos de **CodeSearchNet**, un corpus reconocido por su diversidad y calidad en repositorios de código.
-- **Proceso de muestreo**: Se seleccionó una muestra representativa de **366 fragmentos de código**, asegurando la presencia de docstrings estandarizados.
-- **Generación de documentación**: La herramienta se implementó en **GCP**, utilizando **Google Cloud Functions** para la integración con la **API de OpenAI** y automatizando la generación de documentación basada en prompts predefinidos.
+Antes de empezar, asegúrate de tener configurado lo siguiente:
 
-## Resultados
+1. **Cuenta en Google Cloud**: Deberás tener acceso a Google Cloud Platform (GCP) con permisos para crear funciones de Cloud y buckets en Google Cloud Storage.
+2. **Cuenta en OpenAI**: Para generar documentación automática, necesitarás una clave de API de OpenAI.
+3. **Instalación de Google Cloud SDK**: El SDK de Google Cloud te permite interactuar con GCP desde la línea de comandos. Sigue las instrucciones [aquí](https://cloud.google.com/sdk/docs/install) para instalarlo en tu máquina.
 
-Los resultados muestran que la herramienta puede generar documentación útil y coherente de manera automática. Algunos de los puntos destacados incluyen:
+## Estructura del Proyecto
 
-- Reducción del tiempo dedicado a la documentación.
-- La calidad de la documentación fue evaluada mediante las métricas **BLEU**, **ROUGE-L**, y **METEOR**.
-- Opiniones de desarrolladores expertos sobre la utilidad de los comentarios generados automáticamente.
+- **main.py**: Código principal de la función que maneja los eventos de Google Cloud Storage, descarga archivos Excel, los procesa y genera documentación automática.
+- **requirements.txt**: Lista de las dependencias del proyecto.
+- **LICENSE**: Licencia bajo la cual se distribuye este proyecto (GPL v3).
+- **muestra_366_final_prompt_engineering.xlsx**: Archivo de ejemplo que puede usarse para probar el proyecto.
 
-## Conclusiones
+## Instalación Local
 
-- La documentación automática de código fuente es una solución efectiva para proyectos con grandes cantidades de código.
-- El uso de técnicas de **Prompt Engineering** y **modelos de lenguaje como GPT-4** pueden ofrecer una alternativa viable a la documentación manual.
+### Paso 1: Clonar el Repositorio
 
-## Recomendaciones
+Primero, clona el repositorio en tu máquina local:
 
-- Se sugiere continuar mejorando los prompts para incrementar la precisión de la documentación generada.
-- Ampliar la herramienta a otros lenguajes de programación.
-- Realizar estudios adicionales que incluyan más fragmentos de código para validar la generalización de los resultados.
-
-## Referencias
-
-- OpenAI API Documentation.
-- CodeSearchNet Corpus.
-- Google Cloud Platform Documentation.
-
+```bash
+git clone https://github.com/tu-usuario/AutoDocuCode.git
+cd AutoDocuCode
