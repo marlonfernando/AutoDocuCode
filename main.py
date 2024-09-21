@@ -1,3 +1,19 @@
+# main.py
+# Copyright (C) [año] [tu nombre o el nombre de tu proyecto]
+#
+# Este programa es software libre: puedes redistribuirlo y/o modificarlo
+# bajo los términos de la Licencia Pública General de GNU publicada
+# por la Free Software Foundation, ya sea la versión 3 de la Licencia,
+# o (a tu elección) cualquier versión posterior.
+#
+# Este programa se distribuye con la esperanza de que sea útil,
+# pero SIN NINGUNA GARANTÍA; incluso sin la garantía implícita de
+# MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO PARTICULAR. 
+# Consulta los detalles en la Licencia Pública General de GNU.
+#
+# Deberías haber recibido una copia de la Licencia Pública General de GNU
+# junto con este programa. Si no, consulta <https://www.gnu.org/licenses/>.
+
 from openai import OpenAI
 import pandas as pd
 from google.cloud import storage
