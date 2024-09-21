@@ -1,5 +1,5 @@
 # main.py
-# Copyright (C) [año] [tu nombre o el nombre de tu proyecto]
+# Copyright (C) [2024] [Marlon Fernando Castillo Alfaro]
 #
 # Este programa es software libre: puedes redistribuirlo y/o modificarlo
 # bajo los términos de la Licencia Pública General de GNU publicada
